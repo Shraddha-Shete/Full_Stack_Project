@@ -1,0 +1,113 @@
+.form{
+    width: 350px;
+    height: 490px;
+    background: linear-gradient(to top, rgba(247, 238, 238, 0.8)50%,rgba(247,238,238,0.8)50%);
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(0%,-5%);
+    border-color: #000;
+    border-radius: 10px;
+    padding: 2%;
+    
+}
+
+.form h2{
+    width: 280px;
+    font-family: sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 22px;
+    background-color: #d6770c;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+.form label{
+    width: 280px;
+    height: 35px;
+    display: block;
+    background: transparent;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+#user {
+   
+    width:280px;  
+    height:35px; 
+    margin-left: 20px;
+  }
+
+.form input{
+    width: 280px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+::placeholder{
+    color: black;
+    font-family: Arial;
+}
+.form .btnn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top :65%;
+    left: 29%;
+
+}
+
+.btnn{
+    width: 150px;
+    height: 40px;
+    background: #d6770c;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+
+
+.btnn:hover{
+    background: #fc8702;
+    color: #7c7874;
+}
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 100px;
+    text-align: center;
+}
+.form .link a{
+    text-decoration: none;
+    color: #53d6ed;
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}

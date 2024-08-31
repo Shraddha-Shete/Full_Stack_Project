@@ -1,0 +1,29 @@
+<p>find-all works!</p>
+<table class="booking-table" border="1">
+  <thead>
+    <tr>
+      <th>Hotel Name</th>
+      <th>Hotel Email</th>
+      <th>Customer Name</th>
+      <th>Customer Contact</th>
+      <th>Check-in</th>
+      <th>Check-out</th>
+      <th>Total Rooms</th>
+      <th>Room Type</th>
+      <th>Total Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let booking of findBooking">
+      <td>{{booking.hotelName}}</td>
+      <td>{{booking.hotelEmail}}</td>
+      <td>{{booking.guestName}}</td>
+      <td>{{booking.guestPhone}}</td>
+      <td>{{booking.checkInDate}}</td>
+      <td>{{booking.checkOutDate}}</td>
+      <td>{{booking.numRooms}}</td>
+      <td>{{booking.roomType}}</td>
+      <td>{{booking.totalPrice}}</td>
+    </tr>
+  </tbody>
+</table>

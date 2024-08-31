@@ -1,0 +1,57 @@
+
+<div class="container mt-8">
+    <div class="title h2 text-center mb-4">Manager Registration</div>
+    <br>
+    <div class="content">
+      <form #registrationForm="ngForm" (ngSubmit)="addUser()">
+        <div class="row">
+          <div class="col">
+            <span class="input-group-text">First Name:</span><br>
+            <input type="text" class="form-control" [(ngModel)]="userRegister.firstName" name="firstName" placeholder="Enter your Fisrt Name" required>
+          </div>
+    
+          <div class="col">
+            <span class="input-group-text">Last Name : </span><br>
+            <input type="text"class="form-control" [(ngModel)]=" userRegister.lastName" name="lastName" placeholder="Enter your Last Name" required>
+          </div>
+          
+          </div>
+          <br>
+          <div class="row">
+          <div class="col">
+            <span class="input-group-text">Email : </span><br>
+            <input type="email" class="form-control" [(ngModel)]="userRegister.email"name="email" placeholder="Enter your email" required>
+          </div>
+          
+          <div class="col">
+            <span class="input-group-text">Phone Number : </span><br>
+            <input type="text" class="form-control" [(ngModel)]="userRegister.mobNo"  name="mobNo" placeholder="Enter your number" required>
+          </div>  
+          
+        </div>
+        <br>
+        <div class="row">
+          <div class="col">
+            <span class="input-group-text">Password:</span><br>
+            <input type="password" class="form-control" [(ngModel)]="userRegister.password" name="password" placeholder="Enter your password" required>
+            <small id="passwordHelpInline" class="text-muted">
+              Must be 8-20 characters long.
+            </small>
+          </div>
+          
+          <div class="col">
+            <span class="input-group-text">Confirm Password:</span><br>
+            <input type="password" class="form-control" [(ngModel)]="userRegister.confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+            <div *ngIf="!userRegister.passwordMatch() && registrationForm.form.get('confirmPassword')?.dirty">
+              Passwords do not match.
+            </div>
+          </div>
+          <br>
+        </div>
+        <div class="button d-grid">
+          <input type="submit" class="btn btn-primary btn-sm" value="Register" [disabled]="registrationForm.invalid || !userRegister.passwordMatch()">
+        </div>
+      </form>
+    </div>
+  </div>
+  

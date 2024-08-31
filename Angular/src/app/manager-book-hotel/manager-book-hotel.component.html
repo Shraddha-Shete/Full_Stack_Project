@@ -1,0 +1,96 @@
+<div class="container mt-4">
+    <div class="title h2 text-center mb-4">Book Your Hotel</div>
+    <form #bookingForm="ngForm" (ngSubmit)="bookHotel()">
+      <div class="title h2 text-center mb-4">{{hotelName}}</div>
+      
+      <div class="form-section">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="checkInDate" class="form-label">Check-in Date</label>
+            <input type="date" class="form-control" id="checkInDate" [(ngModel)]="booking.checkInDate" name="checkInDate" required>
+          </div>
+          <div class="col-md-6">
+            <label for="checkOutDate" class="form-label">Check-out Date</label>
+            <input type="date" class="form-control" id="checkOutDate" [(ngModel)]="booking.checkOutDate" name="checkOutDate" required>
+          </div>
+        </div>
+  
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="roomType" class="form-label">Room Type</label>
+            <select class="form-control" id="roomType" [(ngModel)]="booking.roomType" name="roomType" required>
+              <option value="" disabled>Select room type</option>
+              <option *ngFor="let room of roomTypes" [value]="room">{{ room }}</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="numGuests" class="form-label">Number of Rooms</label>
+            <input type="number" class="form-control" id="numGuests" [(ngModel)]="booking.numRooms" name="numGuests" required min="1">
+          </div>
+        </div>
+  
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="guestName" class="form-label">Guest Name</label>
+            <input type="text" class="form-control" id="guestName" [(ngModel)]="booking.guestName" name="guestName" required>
+          </div>
+          <div class="col-md-6">
+            <label for="guestEmail" class="form-label">Guest Email</label>
+            <input type="email" class="form-control" id="guestEmail" [(ngModel)]="booking.guestEmail" name="guestEmail" required>
+          </div>
+        </div>
+  
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="guestPhone" class="form-label">Guest Phone Number</label>
+            <input type="text" class="form-control" id="guestPhone" [(ngModel)]="booking.guestPhone" name="guestPhone" required>
+          </div>
+          <div class="col-md-6">
+            <label for="specialRequests" class="form-label">Special Requests</label>
+            <textarea class="form-control" id="specialRequests" [(ngModel)]="booking.specialRequests" name="specialRequests"></textarea>
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-section">
+        <div class="title h3 text-center mb-4">Payment Details</div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="cardNumber" class="form-label">Card Number</label>
+            <input type="text" class="form-control" id="cardNumber" [(ngModel)]="booking.cardNumber" name="cardNumber" required>
+          </div>
+          <div class="col-md-3">
+            <label for="cardExpiry" class="form-label">Expiry Date (MM/YY)</label>
+            <input type="month" class="form-control" id="cardExpiry" [(ngModel)]="booking.cardExpiry" name="cardExpiry" required>
+          </div>
+          <div class="col-md-3">
+            <label for="cardCVV" class="form-label">CVV</label>
+            <input type="text" class="form-control" id="cardCVV" [(ngModel)]="booking.cardCVV" name="cardCVV" required>
+          </div>
+        </div>
+  
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="cardName" class="form-label">Name on Card</label>
+            <input type="text" class="form-control" id="cardName" [(ngModel)]="booking.cardName" name="cardName" required>
+          </div>
+        </div>
+      </div>
+  
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-block" [disabled]="bookingForm.invalid">Book Now</button>
+      </div>
+    </form>
+  
+    <div *ngIf="receipt" class="receipt mt-4">
+      <h2 class="text-center">Booking Receipt</h2>
+      <p><strong>Hotel Name:</strong> {{ receipt.hotelName }}</p>
+      <p><strong>Check-in Date:</strong> {{ receipt.checkInDate | date }}</p>
+      <p><strong>Check-out Date:</strong> {{ receipt.checkOutDate | date }}</p>
+      <p><strong>Room Type:</strong> {{ receipt.roomType }}</p>
+      <p><strong>Number of Rooms:</strong> {{ receipt.numRooms }}</p>
+      <p><strong>Price per Day: Rs </strong> {{ receipt.pricePerDay }}</p>
+      <p><strong>Total Amount: Rs </strong> {{ receipt.totalAmount }}</p>
+    </div>
+  </div>
+  

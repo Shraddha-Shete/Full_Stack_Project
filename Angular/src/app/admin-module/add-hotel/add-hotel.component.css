@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+ margin-top: 50;
+  /* padding: 0; */
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+/* body{
+  height:30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background: linear-gradient(100deg, white);
+} */
+.container{
+  max-width: 700px;
+  height: 550px;
+  /* width: 100%; */
+  background-color: rgba(247, 238, 238, 0.8);
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.hotel-details{
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+  }
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* height: 3px; */
+  /* width: 30px; */
+  /* border-radius: 5px; */
+  
+}
+textarea{
+    width: 300px;
+}
+.content form .hotel-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .hotel-details .input-box{
+  margin-bottom: 4px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.hotel-details .input-box input{
+  height: 25px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .button{
+   height: 45px;
+   margin: 20px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: #d6770c;
+ }
+ form .button input:hover{
+  background: #fc8702;
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .hotel-details .input-box{
+    margin-bottom: 10px;
+    width: 100%;
+}
+form .category{
+    width: 100%;
+}
+.content form .hotel-details{
+    max-height: 100px;
+    overflow-y: scroll;
+}
+}
+@media(max-width: 459px){
+.container .content .category{
+    flex-direction: column;
+}
+}

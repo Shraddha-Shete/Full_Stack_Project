@@ -1,0 +1,41 @@
+
+<nav class="nav">
+    <a href=""><button class="logout" (click)="logout()"><h1>Luxury Hotels</h1></button></a>
+    <div *ngIf="isLoggedIn; else notCustomer">
+        <ul>
+           
+            <!-- <li><a >Book Hotel</a></li> -->
+            <li><a routerLink="userBookings" >View Booking</a></li>
+            <li><a ><button class="logout" (click)="logout()">logout</button></a></li>
+        </ul>
+    </div>
+    <ng-template #notCustomer>
+        <div *ngIf="isloggedInManag; else notManager">
+            <ul>
+                <li> <a routerLink="facility">Add facilities</a></li>
+                <!-- <li><a  routerLink="bookHotel">Book Hotel</a></li> -->
+                <li><a routerLink="findByHotelId">View Booking</a></li>
+                <li><a ><button class="logout" (click)="logout()">logout</button></a></li>
+            </ul>
+        </div>
+      </ng-template>
+      <ng-template #notManager>
+        <div *ngIf="isLoggedInAdm; else loggedOut">
+            <ul>
+                <li> <a routerLink="addLocation">Add Location</a></li>
+                <li> <a routerLink="addHotel">Add Hotel</a></li>
+                <li> <a  routerLink="managerRegi">Register Hotel Manager</a></li>
+                <li><a routerLink="findAll">View All Booking </a></li>
+                <li><a ><button class="logout" (click)="logout()">logout</button></a></li>
+            </ul>
+        </div>
+      </ng-template>
+    <ng-template #loggedOut>
+        <!-- <div *ngIf="true">  -->
+        <ul>
+            <li> <a routerLink="Register">Registration</a></li>
+               <li> <a  routerLink="login">Login</a></li>
+        </ul>
+    <!-- </div> -->
+    </ng-template>
+</nav>

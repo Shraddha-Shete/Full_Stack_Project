@@ -1,0 +1,23 @@
+/* Ensure the body and html take up the full viewport height */
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent body from scrolling */
+}
+
+/* Make the container take up the full viewport height and width, and make it scrollable */
+.index-page-img {
+    width: 100%;
+    height: 100vh; /* Use 100vh to ensure it takes up the full viewport height */
+    overflow-y: auto; /* Make it scrollable if content exceeds height */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    /* align-items: center; Center the image vertically */
+}
+
+/* Make the image take up the full width or height of the container */
+.index-page-img img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the container */
+}

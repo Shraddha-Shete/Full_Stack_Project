@@ -1,0 +1,87 @@
+.form {
+    width: 350px;
+    height: auto;
+    background: linear-gradient(to top, rgba(247, 238, 238, 0.8) 50%, rgba(247, 238, 238, 0.8) 50%);
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(0%, -5%);
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.form h2 {
+    width: 280px;
+    font-family: sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 22px;
+    background-color: #d6770c;
+    border-radius: 10px;
+    margin: 2px auto;
+    padding: 8px;
+}
+
+.form label {
+    width: 280px;
+    height: 35px;
+    display: block;
+    background: transparent;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+.form input {
+    width: 280px;
+    height: 25px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+::placeholder {
+    color: black;
+    font-family: Arial;
+}
+
+.form .btnn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.btnn {
+    width: 150px;
+    height: 40px;
+    margin-top: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+
+.btnn a {
+    
+    color: #000;
+    font-weight: bold;
+}
+
+.liw {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}

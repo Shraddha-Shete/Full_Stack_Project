@@ -1,0 +1,35 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: scroll; /* Prevent body from scrolling */
+}
+
+/* Container takes up the full viewport height */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+/* Header and footer styles */
+app-header, app-footer {
+    flex-shrink: 0; /* Prevent header and footer from shrinking */
+}
+
+/* Content area takes up the remaining space and is scrollable */
+.content {
+    flex: 1; /* Take up remaining space */
+    overflow-y: auto; /* Make it scrollable if content exceeds height */
+    max-height: 83%;
+    margin-bottom: 1px;
+}
+
+/* Optional: Ensure the content inside router-outlet is responsive */
+.content > * {
+    width: 100%;
+    box-sizing: border-box;
+    /* padding: 0 15px; Adjust padding as needed */
+}

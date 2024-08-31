@@ -1,0 +1,105 @@
+.outer-container {
+    padding: 20px;
+
+    
+  }
+  
+  .hotel-card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width:1300px;
+    height:500px;
+    align-self: center;
+  }
+  
+  .hotel-card .carousel {
+    flex: 1;
+  }
+  
+  .hotel-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  
+  .hotel-info .card-title {
+    align-items: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .hotel-info .card-subtitle {
+    
+    font-size: 20px;
+    
+  }
+  
+  .hotel-info .card-text {
+    font-size: 25px;
+  
+  }
+  
+  
+  .hotel-info .price {
+   
+    font-size: 20px;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-left: 40px;
+  }
+  
+  .hotel-info .btn {
+    margin-left: 40px;
+    align-self: flex-start;
+  }
+  
+  .carousel-inner img {
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+  }
+  .facility-list {
+    margin: 20px 0;
+    padding: 20px;
+  }
+  
+  .facility-list h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .facility-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+  
+  .facility-item {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .facility-item::before {
+    content: '✔';
+    margin-right: 10px;
+    color: green;
+    font-size: 1.5rem;
+  }
+  

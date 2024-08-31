@@ -1,0 +1,23 @@
+
+
+
+
+    <div class="form">
+        <h2>Login Here</h2>
+        <label for="user">User:</label>
+            <select id="user" [(ngModel)]="user"name="user">
+                <option value="Select">--Select--</option>
+                 <option value="Admin">Admin</option>
+                 <option value="Manager">Manager</option>
+                 <option value="Customer">Customer</option>
+            </select>
+        <input type="email" [(ngModel)]="email" name="email" placeholder="Enter Email Here">
+        <input type="password"  [(ngModel)]="password" name="" placeholder="Enter Password Here">
+        <button class="btnn" (click)="login()"><a>Login</a></button>
+
+        <p class="link">Don't have an account<br>
+        <a href="Register">Sign Up</a></p>
+    </div>
+
+
+

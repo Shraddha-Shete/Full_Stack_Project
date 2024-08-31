@@ -1,0 +1,73 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: rgb(3, 24, 61);
+}
+
+.nav h1 {
+    color: rgb(226, 218, 233);
+    margin: 10px;
+    font-size: 40px;
+}
+
+.nav ul {
+    display: inline-flex;
+    list-style-type: none;
+    font-size: 20px; /* Adjusted to 20px for better readability */
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.nav a {
+    color: rgb(226, 218, 233); /* Set link color */
+    text-decoration: none; /* Remove underline from links */
+    display: flex;
+    align-items: center;
+    height: 100%; /* Ensure links fill the height of the nav */
+}
+
+.nav a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.logout {
+    border: none;
+    background-color: transparent;
+    color: rgb(226, 218, 233); /* Match text color with links */
+    cursor: pointer;
+    font-size: inherit; /* Inherit font size from parent */
+    display: flex;
+    align-items: center; /* Center button content vertically */
+    padding: 0; /* Remove default button padding */
+}
+
+.logout:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav li {
+        padding-left: 0;
+        padding-top: 10px;
+    }
+}

@@ -1,0 +1,23 @@
+div{
+    background-color: rgb(19, 19, 19);
+    padding: 1px;
+    margin: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+}
+.div ul{
+    
+    display: inline-flex;
+    list-style-type:none;
+    /* padding: 0;
+    margin: 0;
+    height: 100%; */
+}
+.div li{
+    
+    padding-left: 50px;
+    padding-bottom: 5px;
+}

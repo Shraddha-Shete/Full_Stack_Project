@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="title">Add Hotel</div>
+    <div class="content">
+      <form #hotelForm="ngForm" (ngSubmit)="onSubmit(hotelForm)" class="form">
+        <div class="hotel-details">
+          <!-- Hotel Name -->
+          <div class="input-box">
+            <span class="details">Hotel Name</span>
+            <input type="text" placeholder="Enter your name" [(ngModel)]="hotel.hotelName" name="name" required>
+          </div>
+          <!-- Location -->
+          <div class="input-box">
+            <span class="details">Location</span>
+            <input type="text" placeholder="Enter your location" [(ngModel)]="hotel.location" name="location" required>
+          </div>
+          <!-- Description -->
+          <div class="input-box">
+            <span class="details">Description</span>
+            <textarea id="description" name="description" rows="4" cols="45" [(ngModel)]="hotel.hotelDescription"></textarea>
+          </div>
+          <!-- Hotel Admin -->
+          <div class="input-box">
+            <span class="details">Hotel Admin</span>
+            <input type="text" placeholder="Select hotel Admin" [(ngModel)]="hotel.hotelAdmin" name="admin" required>
+          </div>
+          <!-- Hotel Email -->
+          <div class="input-box">
+            <span class="details">Hotel Email</span>
+            <input type="email" placeholder="Enter email" [(ngModel)]="hotel.email" name="email" required>
+          </div>
+          <!-- Price Per Day -->
+          <div class="input-box">
+            <span class="details">Price Per Day</span>
+            <input type="number" placeholder="Enter price per day" [(ngModel)]="hotel.pricePerDay" name="pricePerDay" required>
+          </div>
+          <!-- Total Rooms -->
+          <div class="input-box">
+            <span class="details">Total Rooms</span>
+            <input type="number" placeholder="Enter total rooms" [(ngModel)]="hotel.hotelRoom" name="totalRooms" required>
+          </div>
+          <!-- Street -->
+          <div class="input-box">
+            <span class="details">Street</span>
+            <input type="text" placeholder="Enter street" [(ngModel)]="hotel.street" name="street" required>
+          </div>
+          <!-- Pin Code -->
+          <div class="input-box">
+            <span class="details">Pin code</span>
+            <input type="text" placeholder="Enter pin code" [(ngModel)]="hotel.pinCode" name="pinCode" required>
+          </div>
+          <!-- Image Inputs -->
+          <div class="input-box">
+            <span class="details">Add Image1</span>
+            <input type="file" (change)="onFileChange($event, 0)" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Add Image2</span>
+            <input type="file" (change)="onFileChange($event, 1)" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Add Image3</span>
+            <input type="file" (change)="onFileChange($event, 2)" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register" [disabled]="!hotelForm.form.valid">
+        </div>
+      </form>
+    </div>
+  </div>
+  
